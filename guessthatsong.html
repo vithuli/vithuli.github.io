@@ -1,21 +1,25 @@
 <script>
-  function start() {
+var playHowLong = 1000; 
+  
+function start() {
   var music = document.getElementById("music");
-    console.log("Playing the music");
-    music.play();
-  }
+  console.log("Playing the music");
+  music.play();
+}
+  
 function pause() {
   var music = document.getElementById("music");
     console.log("Pausing the music");
     music.pause();
   }
   
-  function onesecond() {
+function onesecond() {
   var music = document.getElementById("music");
-    console.log("Starting for one second");
-    music.play();
-    window.setTimeout(pause, 1000);
-  }
+  console.log("Starting for one second");
+  music.play();
+  window.setTimeout(pause, playHowLong);
+  playHowLong += 1000;
+}
   
   document.onload = start;
 </script>
