@@ -4,11 +4,19 @@
     console.log("Playing the music");
     music.play();
   }
-   function pause() {
+function pause() {
   var music = document.getElementById("music");
     console.log("Pausing the music");
     music.pause();
   }
+  
+  function onesecond() {
+  var music = document.getElementById("music");
+    console.log("Starting for one second");
+    music.play();
+    window.setTimeout(pause, 1000);
+  }
+  
   document.onload = start;
 </script>
 <audio controls id="music">
@@ -17,4 +25,5 @@
   Your browser does not support the audio tag.
 </audio>
 <button onclick="start()">Play</button>
-<button onclick="pause()">Play</button>
+<button onclick="pause()">Pause</button>
+<button onclick="onesecond()">Play one second worth</button>
