@@ -16,7 +16,7 @@ function pause() {
 function onesecond() {
   var music = document.getElementById("music");
   console.log("Starting for one second");
-  music.fastseek(0);
+  music.fastSeek(0);
   music.play();
   window.setTimeout(pause, playHowLong);
   playHowLong += 1000;
