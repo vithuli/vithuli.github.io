@@ -1,9 +1,14 @@
 <script>
   function start() {
   var music = document.getElementById("music");
+    console.log("Playing the music");
     music.play();
   }
-  
+   function pause() {
+  var music = document.getElementById("music");
+    console.log("Pausing the music");
+    music.pause();
+  }
   document.onload = start;
 </script>
 <audio controls id="music">
@@ -11,3 +16,5 @@
   <source src="zep_hurme_-_1.mp3" type="audio/mpeg">
   Your browser does not support the audio tag.
 </audio>
+<button onclick="start()">Play</button>
+<button onclick="pause()">Play</button>
